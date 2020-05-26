@@ -26,3 +26,31 @@ while True:
     time.sleep(1)
     im1 = pyautogui.screenshot()
     im1 = np.asarray(im1.convert(mode = 'L'))
+
+    res = cv2.matchTemplate(im1, template3, cv2.TM_CCOEFF_NORMED)
+    loc = np.where(res >= threshold)
+    if loc[0].size != 0:
+        pyautogui.click(list(zip(*loc[::-1]))[0])
+        continue
+
+    res = cv2.matchTemplate(im1, template4, cv2.TM_CCOEFF_NORMED)
+    loc = np.where(res >= threshold)
+    if loc[0].size != 0:
+        pyautogui.click(list(zip(*loc[::-1]))[0])
+        continue
+
+    res = cv2.matchTemplate(im1, template5, cv2.TM_CCOEFF_NORMED)
+    loc = np.where(res >= threshold)
+    if loc[0].size != 0:
+        pyautogui.click(list(zip(*loc[::-1]))[0])
+        continue
+
+    res = cv2.matchTemplate(im1, template6, cv2.TM_CCOEFF_NORMED)
+    loc = np.where(res >= threshold)
+    if loc[0].size != 0:
+        pyautogui.click(list(zip(*loc[::-1]))[0])
+        continue
+
+    if pyautogui.position() == (0,0):
+        pyautogui.alert(text = 'Adskipper is Closed', title = 'Adskipper Closed')
+    	break
