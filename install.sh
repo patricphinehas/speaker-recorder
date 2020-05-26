@@ -8,4 +8,5 @@ if [ ! -d "$DIR" ]; then
 	sudo mkdir $DIR
 fi
 sudo cp record_speakers.py record-spreakers.svg record_speakers.glade /usr/local/bin/record-speakers
+# sudo cp /images/*.* /usr/local/bin/record-speakers/images
 cp record_speakers.desktop ${HOME}/.local/share/applications/
