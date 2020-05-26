@@ -20,12 +20,13 @@ except expression as identifier:
 threshold = 0.7
 
 # alert for the closure of the application
-pyautogui.alert(text = 'Keep the mouse pointer on the top left corner of screen to stop the program', title= 'Stopping Criteria')
+pyautogui.alert(text='Keep the mouse pointer on the top left corner of screen to stop the program',
+                title='Stopping Criteria')
 
 while True:
     time.sleep(1)
     im1 = pyautogui.screenshot()
-    im1 = np.asarray(im1.convert(mode = 'L'))
+    im1 = np.asarray(im1.convert(mode='L'))
 
     res = cv2.matchTemplate(im1, template3, cv2.TM_CCOEFF_NORMED)
     loc = np.where(res >= threshold)
@@ -51,6 +52,6 @@ while True:
         pyautogui.click(list(zip(*loc[::-1]))[0])
         continue
 
-    if pyautogui.position() == (0,0):
-        pyautogui.alert(text = 'Adskipper is Closed', title = 'Adskipper Closed')
-    	break
+    if pyautogui.position() == (0, 0):
+        pyautogui.alert(text='Adskipper is Closed', title='Adskipper Closed')
+        break
