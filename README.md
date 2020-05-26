@@ -1,6 +1,6 @@
 Record what's being played on your speakers
 
-![Speaker Recorder Window](./img.png)
+![Speaker Recorder Window](/images/img.png)
 
 Setup
 -----
