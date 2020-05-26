@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo echo "Installing pulseaudio-utils and lame"
-sudo apt-get install pulseaudio-utils lame
+sudo apt-get install pulseaudio-utils lame 
 
 DIR=/usr/local/bin/record-speakers
 if [ ! -d "$DIR" ]; then
