@@ -55,7 +55,8 @@ def skipper():
         res = cv2.matchTemplate(im1, template7, cv2.TM_CCOEFF_NORMED)
         loc = np.where(res >= threshold)
         if loc[0].size != 0:
-            pyautogui.alert(text='i Just found the auto play, Voila!', title='found autoplay')
+            # pyautogui.alert(text='i Just found the auto play, Voila!', title='found autoplay')
+            print("found autoplay")
             continue
     
 
