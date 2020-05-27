@@ -13,6 +13,7 @@ try:
     template4 = cv2.imread('./images/template4.png', 0)
     template5 = cv2.imread('./images/template5.png', 0)
     template6 = cv2.imread('./images/template6.png', 0)
+    template7 = cv2.imread('./images/template7.png', 0)
 except expression as identifier:
     print("error loading images for comaprison")
 
@@ -50,6 +51,11 @@ def skipper():
         if loc[0].size != 0:
             pyautogui.click(list(zip(*loc[::-1]))[0])
             continue
+
+        res = cv2.matchTemplate(im1, template7, cv2.TM_CCOEFF_NORMED)
+        loc = np.where(res >= threshold)
+        pyautogui.alert(text='i Just found the auto play, Voila!', title='found autoplay')
+    
 
         if pyautogui.position() == (0, 0):
             pyautogui.alert(text='Adskipper is Closed', title='Adskipper Closed')
