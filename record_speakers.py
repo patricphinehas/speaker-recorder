@@ -6,6 +6,7 @@ import re
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
+
 class Record:
     def __init__(self):
         self.gladefile = "record_speakers.glade"
