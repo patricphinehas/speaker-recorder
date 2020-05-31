@@ -8,6 +8,8 @@ import time
 # 1 -> color
 # 0 -> grayscale
 # -1 -> unchanged Alpha channel replication
+
+
 try:
     template3 = cv2.imread('./images/template3.png', 0)
     template4 = cv2.imread('./images/template4.png', 0)
@@ -52,12 +54,12 @@ def skipper():
             pyautogui.click(list(zip(*loc[::-1]))[0])
             continue
 
-        res = cv2.matchTemplate(im1, template7, cv2.TM_CCOEFF_NORMED)
-        loc = np.where(res >= threshold)
-        if loc[0].size != 0:
-            # pyautogui.alert(text='i Just found the auto play, Voila!', title='found autoplay')
-            print("found autoplay")
-            continue
+        # res = cv2.matchTemplate(im1, template7, cv2.TM_CCOEFF_NORMED)
+        # loc = np.where(res >= threshold)
+        # if loc[0].size != 0:
+        #     # pyautogui.alert(text='i Just found the auto play, Voila!', title='found autoplay')
+        #     print("found autoplay")
+        #     continue
     
 
         if pyautogui.position() == (0, 0):

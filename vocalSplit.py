@@ -7,7 +7,7 @@ import os
 
 import librosa.display
 
-music_folder = os.environ["HOME"]
+music_path = os.environ["HOME"]
 music_path = music_path + "/Music"
 # mp3file = "audio.mp3"
 mp3file = music_path + "/" + str(input("enter the song name")) +".mp3"
