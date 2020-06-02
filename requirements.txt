@@ -7,3 +7,9 @@ ffmpeg-python
 norbert==0.2.1
 librosa>=0.7.2
 matplotlib
+
+#updated requirements
+webbrowser
+pyautogui
+pyperclip
+pafy
