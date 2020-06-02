@@ -14,7 +14,7 @@ class Record:
         self.builder.add_from_file(self.gladefile)
         self.builder.connect_signals(self)
         self.window = self.builder.get_object("Record_Speakers")
-        self.textbox = self.builder.get_object("entry1")
+        self.textbox = self.builder.get_object("enter the url to get the links")
         self.menu = self.builder.get_object("menu1")
         self.infobar = self.builder.get_object("infobar1")
         self.label1 = self.builder.get_object("label1")

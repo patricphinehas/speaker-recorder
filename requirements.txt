@@ -13,3 +13,5 @@ webbrowser
 pyautogui
 pyperclip
 pafy
+bs4
+requests

@@ -42,12 +42,6 @@ class Record:
             else:
                 self.label1.set_text("enter url")
 
-
-
-
-
-
-
         else:
             print ("Stop")
             self.label1.set_text("Recording Stopped")
