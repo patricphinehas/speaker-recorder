@@ -6,7 +6,10 @@ import re
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 import pafy
-
+import webbrowser as wb
+from pytube import Playlist
+import skip
+from pytube import YouTube
 
 
 class Record:
@@ -36,10 +39,20 @@ class Record:
             self.label1.set_text("Recording Started")
 
             if len(self.textbox.get_text()) != 0:
-                mp3file = self.textbox.get_text()
-                fileData = pafy.new(mp3file)
-                audio = fileData.audiostreams
-                audio[2].download()
+                # mp3file = self.textbox.get_text()
+                # fileData = pafy.new(mp3file)
+                # audio = fileData.audiostreams
+                # audio[2].download()
+
+                # get the sub URL's from the playlist
+                URL = self.textbox.get_text()
+                playlist = Playlist(URL)
+                for video_url in playlist.video_urls:
+                    print(video_url)
+                    
+                    skip.skipper()
+                    
+
             else:
                 self.label1.set_text("enter url")
 
