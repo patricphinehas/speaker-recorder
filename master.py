@@ -49,8 +49,8 @@ class Record:
                 playlist = Playlist(URL)
                 for video_url in playlist.video_urls:
                     print(video_url)
-                    
-                    skip.skipper()
+
+                    # skip.skipper()
                     
 
             else:
