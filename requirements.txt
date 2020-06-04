@@ -1,3 +1,14 @@
+
+#updated requirements
+#webbrowser || built inside as default library package
+pyautogui
+pyperclip
+pafy
+bs4
+requests
+pytube3
+
+
 importlib_resources; python_version<'3.7'
 requests
 setuptools>=41.0.0
@@ -7,12 +18,3 @@ ffmpeg-python
 norbert==0.2.1
 librosa>=0.7.2
 matplotlib
-
-#updated requirements
-webbrowser
-pyautogui
-pyperclip
-pafy
-bs4
-requests
-pytube3
