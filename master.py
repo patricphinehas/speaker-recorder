@@ -45,6 +45,7 @@ class Record:
                 # audio[2].download()
 
                 # get the sub URL's from the playlist
+                # https://www.youtube.com/watch?v=JGwWNGJdvx8&list=PLMC9KNkIncKtPzgY-5rmhvj7fax8fdxoj
                 URL = self.textbox.get_text()
                 playlist = Playlist(URL)
                 for video_url in playlist.video_urls:
