@@ -8,7 +8,6 @@ from gi.repository import Gtk
 import pafy
 import webbrowser as wb
 from pytube import Playlist
-# import skip
 from pytube import YouTube
 
 
@@ -57,7 +56,6 @@ class Record:
                     print("audio quality :" + bestaudio.bitrate)
                     print("audio ext :" + bestaudio.extension)
                     
-
                     # skip.skipper()
                     
 
