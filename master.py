@@ -49,7 +49,7 @@ class Record:
                     print("Video title is :"+video.title)
                     print("Video Duration is :"+video.duration)
                     print("audio quality :" + bestaudio.bitrate)
-                    bestaudio.download()
+                    bestaudio.download(filepath="m4a")
                     print("download")
                     
             else:
