@@ -8,7 +8,7 @@ from gi.repository import Gtk
 import pafy
 import webbrowser as wb
 from pytube import Playlist
-import skip
+# import skip
 from pytube import YouTube
 
 
@@ -50,6 +50,13 @@ class Record:
                 playlist = Playlist(URL)
                 for video_url in playlist.video_urls:
                     print(video_url)
+                    video=pafy.new(video_url)
+                    bestaudio = video.getbestaudio()
+                    print("Video title is :"+video.title)
+                    print("Video Duration is :"+video.duration)
+                    print("audio quality :" + bestaudio.bitrate)
+                    print("audio ext :" + bestaudio.extension)
+                    
 
                     # skip.skipper()
                     
