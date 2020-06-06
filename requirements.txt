@@ -7,7 +7,7 @@ pafy
 bs4
 requests
 pytube3
-
+AudioConverter
 
 # for future works
 # importlib_resources; python_version<'3.7'

@@ -2,11 +2,9 @@ import subprocess
 import sys
 import os
 import gi
-import re
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 import pafy
-import webbrowser as wb
 from pytube import Playlist
 from pytube import YouTube
 
@@ -51,6 +49,8 @@ class Record:
                     print("audio quality :" + bestaudio.bitrate)
                     bestaudio.download(filepath="m4a")
                     print("download")
+                # still under tests for audio conversions for further processing
+                # os.system('audioconvert -v /m4a /mp3 -o mp3')
                     
             else:
                 self.label1.set_text("enter url")
