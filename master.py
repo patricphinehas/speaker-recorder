@@ -38,11 +38,6 @@ class Record:
             self.label1.set_text("Recording Started")
 
             if len(self.textbox.get_text()) != 0:
-                # mp3file = self.textbox.get_text()
-                # fileData = pafy.new(mp3file)
-                # audio = fileData.audiostreams
-                # audio[2].download()
-
                 # get the sub URL's from the playlist
                 # https://www.youtube.com/watch?v=JGwWNGJdvx8&list=PLMC9KNkIncKtPzgY-5rmhvj7fax8fdxoj
                 URL = self.textbox.get_text()
@@ -50,15 +45,13 @@ class Record:
                 for video_url in playlist.video_urls:
                     print(video_url)
                     video=pafy.new(video_url)
-                    bestaudio = video.getbestaudio()
+                    bestaudio = video.getbestaudio(preftype = "m4a", ftypestrict = "True")
                     print("Video title is :"+video.title)
                     print("Video Duration is :"+video.duration)
                     print("audio quality :" + bestaudio.bitrate)
-                    print("audio ext :" + bestaudio.extension)
+                    bestaudio.download()
+                    print("download")
                     
-                    # skip.skipper()
-                    
-
             else:
                 self.label1.set_text("enter url")
 

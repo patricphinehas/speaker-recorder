@@ -1,10 +1,14 @@
-Record what's being played on your speakers
+download the whole playlist without hassle
 
 ![Speaker Recorder Window](/images/img.png)
 
 Setup
 -----
 1. Run ./install.sh
-2. Go to Dash Home, search for speaker recorder and start recording
+2. Go to Dash Home, search for speaker recorder
+3. copy paste the URL(the playlist)
+
+
+[p.s. downloads to m4a folder in the application root directory]
 
 [Works on any Debian based distro]
