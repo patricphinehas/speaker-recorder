@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Record Speakers
+Name=Playlist Ripper
 Comment=Download all from a playlist
 Exec=python3 /usr/local/bin/record-speakers/master.py
 Path=/usr/local/bin/record-speakers/

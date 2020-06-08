@@ -5,7 +5,7 @@
   <object class="GtkWindow" id="Record_Speakers">
     <property name="can_focus">False</property>
     <property name="has_focus">True</property>
-    <property name="title" translatable="yes">Record Speakers</property>
+    <property name="title" translatable="yes">Playlist Ripper</property>
     <property name="default_width">300</property>
     <property name="default_height">100</property>
     <property name="icon_name">Record_Speakers</property>
@@ -26,7 +26,7 @@
             <property name="can_focus">False</property>
             <property name="halign">center</property>
             <property name="valign">baseline</property>
-            <property name="label" translatable="yes">Record</property>
+            <property name="label" translatable="yes">Fetch</property>
             <property name="ellipsize">end</property>
           </object>
           <packing>
@@ -61,7 +61,7 @@
             <property name="valign">center</property>
             <property name="margin_bottom">5</property>
             <property name="primary_icon_stock">gtk-file</property>
-            <property name="placeholder_text" translatable="yes">Filename (Default: ~/Music/audio.mp3)</property>
+            <property name="placeholder_text" translatable="yes">Playlist URL (full)</property>
           </object>
           <packing>
             <property name="expand">False</property>
