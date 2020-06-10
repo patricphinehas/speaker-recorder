@@ -41,14 +41,17 @@ class Record:
                 URL = self.textbox.get_text()
                 playlist = Playlist(URL)
                 for video_url in playlist.video_urls:
-                    print(video_url)
-                    video=pafy.new(video_url)
-                    bestaudio = video.getbestaudio(preftype = "m4a", ftypestrict = "True")
-                    print("Video title is :"+video.title)
-                    print("Video Duration is :"+video.duration)
-                    print("audio quality :" + bestaudio.bitrate)
-                    bestaudio.download(filepath="m4a")
-                    print("download")
+                    # print(video_url)
+                    try:
+                        video=pafy.new(video_url)
+                        bestaudio = video.getbestaudio(preftype = "m4a", ftypestrict = "True")
+                        print("Video title is :"+video.title)
+                        # print("Video Duration is :"+video.duration)
+                        # print("audio quality :" + bestaudio.bitrate)
+                        bestaudio.download(filepath="m4a")
+                        # print("download")
+                    except:
+                        continue
                 # still under tests for audio conversions for further processing
                 # os.system('audioconvert -v /m4a /mp3 -o mp3')
                     
