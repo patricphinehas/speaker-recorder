@@ -2,7 +2,7 @@ download the whole playlist without hassle
 
 ![Speaker Recorder Window](/images/img.png)
 
-Setup
+Setup for GUI version
 -----
 1. Run ./install.sh
 2. Go to Dash Home, search for speaker recorder
@@ -19,6 +19,9 @@ TARGET_FORMATS
 .mp4
 .m4a
 
+
+CLI version
+``` python3 cli.py [URL] ```
 
 [p.s. downloads to m4a folder in the application root directory]
 
